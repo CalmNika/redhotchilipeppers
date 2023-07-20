@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body style="background-image: url('/static/about.jpg');">
+    <div style="text-align: center;">
+        <h1>We make dreams come true!</h1>
+    </div>
+    <div style="text-align: center; position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
+        <a href="{% url 'contacts' %}" class="button {% if request.path == '/contacts/' %}active{% endif %}">Contacts</a> |
+        <a href="{% url 'home' %}" class="button {% if request.path == '/home/' %}active{% endif %}">Home</a>
+    </div>
+</body>
+</html>
+
+
+
